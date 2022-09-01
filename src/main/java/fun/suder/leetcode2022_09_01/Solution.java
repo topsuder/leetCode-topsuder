@@ -1,18 +1,7 @@
-# leetCode-topsuder
-〈力扣个人刷题代码仓库〉👾👾👾
-## 记录耗时图
+package fun.suder.leetcode2022_09_01;
 
-> 1470. 重新排列数组
-```xpath2
-src/main/java/fun/suder/leetcode2022_08_29/Solution.java
-```
-![img.png](src/main/resources/img/2022_08_29.jpg)
+import com.sun.org.apache.xpath.internal.operations.And;
 
->【1475. 商品折扣后的最终价格】2022-09-01 每日一题
-```xpath2
-src/main/java/fun/suder/leetcode2022_09_01/Solution.java
-```
-```java
 import java.util.Arrays;
 
 class Solution {
@@ -38,5 +27,3 @@ class Solution {
         System.out.println(Arrays.toString(new Solution().finalPrices(ints)));
     }
 }
-```
-![img.png](src/main/resources/img/2022_09_01.png)
