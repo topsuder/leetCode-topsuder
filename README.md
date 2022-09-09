@@ -118,7 +118,7 @@ class Solution {
 
 >【667. 优美的排列 II】2022-09-08 每日一题
 ```xpath2
-src/main/java/fun/suder/leetcode2022_09_07/Solution.java
+src/main/java/fun/suder/leetcode2022_09_08/Solution.java
 ```
 ```java
 package fun.suder.leetcode2022_09_08;
@@ -151,3 +151,35 @@ class Solution {
 }
 ```
 ![img.png](src/main/resources/img/2022_09_08.png)
+
+
+
+>【1598. 文件夹操作日志搜集器】2022-09-09 每日一题
+```xpath2
+src/main/java/fun/suder/leetcode2022_09_09/Solution.java
+```
+```java
+package fun.suder.leetcode2022_09_09;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Solution {
+    public int minOperations(String[] logs) {
+        int ans = 0;
+        for (String log : logs) {
+            if ("../".equals(log)&&ans>0) {
+                ans--;
+            } else if (!"./".equals(log)&&!"../".equals(log)) {
+                ans++;
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Solution().minOperations(new String[]{"./","wz4/","../","mj2/","../","../","ik0/","il7/"}));
+    }
+}
+```
+![img.png](src/main/resources/img/2022_09_09.png)
