@@ -151,3 +151,28 @@ class Solution {
 }
 ```
 ![img.png](src/main/resources/img/2022_09_08.png)
+
+> 1684. 统计一致字符串的数目
+```java
+class Solution {
+    public int countConsistentStrings(String allowed, String[] words) {
+        boolean[] flags = new boolean[words.length];
+        for (int i = 0; i < words.length; i++) {
+            for (char c : words[i].toCharArray()) {
+                if (!allowed.contains(String.valueOf(c))){
+                    flags[i] = true;
+                    break;
+                }
+            }
+        }
+        int count = 0;
+        for (boolean flag : flags) {
+            if (!flag){
+                count++;
+            }
+        }
+        return count;
+    }
+}
+```
+![img.png](src/main/resources/img/2022_11_08.png)
