@@ -118,7 +118,7 @@ class Solution {
 
 >【667. 优美的排列 II】2022-09-08 每日一题
 ```xpath2
-src/main/java/fun/suder/leetcode2022_09_07/Solution.java
+src/main/java/fun/suder/leetcode2022_09_08/Solution.java
 ```
 ```java
 package fun.suder.leetcode2022_09_08;
