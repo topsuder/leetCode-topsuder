@@ -1,4 +1,4 @@
-package fun.suder.leetcode_2023_10_09_2578;
+package fun.suder.leetcode2023_10_09_2578;
 
 import java.util.ArrayList;
 import java.util.Comparator;
