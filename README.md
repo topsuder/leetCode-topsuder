@@ -47,8 +47,9 @@ class Solution {
 ```xpath2
 src/main/java/fun/suder/leetcode2022_09_07/Solution.java
 ```
+
 ```java
-package fun.suder.leetcode2022_09_07;
+package fun.suder.每日一题.leetcode2022_09_07;
 
 
 import java.util.ArrayList;
@@ -57,7 +58,7 @@ import java.util.Objects;
 
 class Solution {
     public String reorderSpaces(String text) {
-        String[] words =text.split(" ");
+        String[] words = text.split(" ");
         int a = 0;
         List<String> strings = new ArrayList<>();
 
@@ -67,39 +68,39 @@ class Solution {
             }
         }
         for (char c : text.toCharArray()) {
-            if (c==' '){
+            if (c == ' ') {
                 a++;
             }
         }
-        if (a==0){
+        if (a == 0) {
             return text;
         }
-        if ((strings.size() - 1)==0) {
+        if ((strings.size() - 1) == 0) {
             String s = strings.get(0);
             for (int i = 0; i < a; i++) {
 
-                s +=" ";
+                s += " ";
             }
             return s;
         }
         final int yu = a % (strings.size() - 1);
-        int i = 0 ;
-        if (yu==0) {
-            i=a/(strings.size()-1);
-        }else {
-            i=(a-yu)/(strings.size()-1);
+        int i = 0;
+        if (yu == 0) {
+            i = a / (strings.size() - 1);
+        } else {
+            i = (a - yu) / (strings.size() - 1);
         }
         String str = "";
         for (int i1 = 0; i1 < strings.size(); i1++) {
-            str+= strings.get(i1);
-            if (i1!=strings.size()-1){
+            str += strings.get(i1);
+            if (i1 != strings.size() - 1) {
                 for (int j = 0; j < i; j++) {
-                    str+=" ";
+                    str += " ";
                 }
-            }else {
-                if (yu!=0){
+            } else {
+                if (yu != 0) {
                     for (int i2 = 0; i2 < yu; i2++) {
-                        str+=" ";
+                        str += " ";
                     }
                 }
             }
@@ -120,8 +121,9 @@ class Solution {
 ```xpath2
 src/main/java/fun/suder/leetcode2022_09_08/Solution.java
 ```
+
 ```java
-package fun.suder.leetcode2022_09_08;
+package fun.suder.每日一题.leetcode2022_09_08;
 
 import java.util.Arrays;
 
@@ -131,11 +133,11 @@ class Solution {
         int kUp = k + 1;
         int numTemp = 1;
         //下标段[0, k]中，偶数下标填充[1,2,3..]
-        for (int i = 0; i <= k; i += 2){
+        for (int i = 0; i <= k; i += 2) {
             ans[i] = numTemp++;
         }
         //下标段[0, k]中，奇数下标填充[k + 1, k, k - 1...]
-        for (int i = 1; i <= k; i += 2){
+        for (int i = 1; i <= k; i += 2) {
             ans[i] = kUp--;
         }
         //下标段[k + 1, n - 1]都是顺序填充
