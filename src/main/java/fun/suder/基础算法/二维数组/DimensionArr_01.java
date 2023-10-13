@@ -18,24 +18,15 @@ public class DimensionArr_01 {
 
     public void rotate(int[][] matrix) {
 
-
-
-        // 设想：
-        // 旋转90度的方程是？
-        // x= y
-        // y = matrix.length - 1 - x
-
-        for (int y = 0; y < matrix.length; y++) {
-            for (int x = 0; x < matrix[y].length; x++) {
-
-                    int temp = matrix[y][x];
-
-                    int tempX = y;
-                    int tempY = matrix.length - 1 - x;
-
-                    matrix[y][x] = matrix[tempY][tempX];
-
-                    matrix[tempY][tempX] = temp;
+        int n = matrix.length;
+        int[][] matrix_new = new int[n][n];
+        for (int i = 0; i < n / 2; ++i) {
+            for (int j = 0; j < (n + 1) / 2; ++j) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[n - j - 1][i];
+                matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1];
+                matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1];
+                matrix[j][n - i - 1] = temp;
             }
         }
     }
